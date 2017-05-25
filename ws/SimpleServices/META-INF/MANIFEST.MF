@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Homenetwork
+Bundle-SymbolicName: SimpleServices
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: simpleServices.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/*.xml
+Import-Package: org.eclipse.osgi.framework.console;version="1.0.0",
+ org.openhab.training.electricity.provider,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.component.annotations;version="1.2.0";resolution:=optional,
+ org.osgi.util.tracker;version="1.3.1"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.openhab.training.electricity.provider;bundle-version="1.0.0"
+Export-Package: simpleServices

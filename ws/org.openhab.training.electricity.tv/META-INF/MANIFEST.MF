@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tv
+Bundle-SymbolicName: org.openhab.training.electricity.tv
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.openhab.training.electricity.tv.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.openhab.training.electricity.battery,
+ org.openhab.training.electricity.dynamicconsumer,
+ org.openhab.training.electricity.provider,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="1.5.1"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.openhab.training.electricity.consumer,
+ org.openhab.training.electricity.homenetwork
