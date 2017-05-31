@@ -57,24 +57,20 @@ public class TV implements ElectricityConsumer, DynamicConsumer,
         // puskame nishka prez opredelen period
 
         scheduler.scheduleAtFixedRate(providingAction, 6, 6, TimeUnit.SECONDS);
-        // providingAction.start();
-        providingAction.join();
-
-        System.out.println("current provider in the launcher is" + currentProvider);
 
     }
 
     @Override
     public ElectricityProvider addingService(ServiceReference<ElectricityProvider> reference) {
-        // System.out.println("into the adding service");
+
         ElectricityProvider service = context.getService(reference);
         if (service instanceof HomeElectricityNetwork || service instanceof Battery) {
             providerAdded(service);
-            System.out.println("service added to the list succesfully" + service);
+            System.out.println("Service added to the list succesfully:" + service);
         } else {
             System.out.println("no service added ");
         }
-        System.out.println("Current provider is" + currentProvider);
+        System.out.println("Current provider is " + currentProvider);
         return service;
     }
 
@@ -86,12 +82,16 @@ public class TV implements ElectricityConsumer, DynamicConsumer,
 
     @Override
     public void removedService(ServiceReference<ElectricityProvider> reference, ElectricityProvider service) {
-        // System.out.println("into the removing service");
+
         ElectricityProvider serviceElProvider = context.getService(reference);
         providerRemoved(serviceElProvider);
-        System.out.println("list on 0 position " + listOfProviders.get(0));
-        setCurrentProvider(listOfProviders.get(0));
-        System.out.println("current provider is " + listOfProviders.get(0));
+
+        if (listOfProviders.size() != 0) {
+            setCurrentProvider(listOfProviders.get(0));
+            System.out.println("current provider is " + listOfProviders.get(0));
+        } else {
+            System.out.println("No available providers at the moment...");
+        }
 
     }
 
@@ -107,7 +107,7 @@ public class TV implements ElectricityConsumer, DynamicConsumer,
         if (currentProvider == e) {
             currentProvider = null;
         }
-        System.out.println("provider has been removed" + "current provider is" + currentProvider);
+        System.out.println("provider has been removed " + " current provider is" + currentProvider);
     }
 
     @Override

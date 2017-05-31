@@ -49,7 +49,7 @@ public class BasicRadio implements ElectricityConsumer, BundleActivator {
 
     @Override
     public List<ElectricityProvider> getAllAvailableProviders() {
-        // TODO Auto-generated method stub
+        // no need to override at this phase
         return null;
     }
 
