@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true"  name="org.openhab.training.electricity.combinedradio.CombinedRadio">   
-   <service>
-      <provide interface="org.openhab.training.electricity.consumer.ElectricityConsumer"/>
-   </service>
-   <implementation class="org.openhab.training.electricity.combinedradio.CombinedRadio"/>
-   <reference bind="bind" cardinality="0..n" interface="org.openhab.training.electricity.provider.ElectricityProvider" name="ElectricityProvider" policy="static" unbind="unbind"/>   
-</scr:component>
