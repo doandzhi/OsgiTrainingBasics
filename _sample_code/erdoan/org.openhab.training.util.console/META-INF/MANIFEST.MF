@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Console
+Bundle-SymbolicName: org.openhab.training.util.console
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.eclipse.osgi.framework.console,
+ org.openhab.training.electricity.consumer,
+ org.openhab.training.electricity.dynamicconsumer,
+ org.openhab.training.electricity.provider,
+ org.openhab.training.electricity.tv.ds,
+ org.osgi.service.cm
+Service-Component: OSGI-INF/*.xml
+Bundle-ActivationPolicy: lazy

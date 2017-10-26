@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.openhab.training.util.console">
+   <implementation class="org.openhab.training.util.console.CustomComands"/>
+   <service>
+      <provide interface="org.eclipse.osgi.framework.console.CommandProvider"/>
+   </service>
+   <reference bind="showAllProviders" cardinality="0..n" interface="org.openhab.training.electricity.provider.ElectricityProvider" name="ElectricityProvider" policy="dynamic"/>
+   <reference bind="setConsumer" cardinality="0..n" interface="org.openhab.training.electricity.consumer.ElectricityConsumer" name="ElectricityConsumer" policy="dynamic"/>
+   <reference bind="setDynamicConsumer" cardinality="0..n" interface="org.openhab.training.electricity.dynamicconsumer.DynamicConsumer" name="DynamicConsumer" policy="dynamic"/>
+   <reference bind="bind" cardinality="0..1" interface="org.osgi.service.cm.ConfigurationAdmin" name="ConfigurationAdmin" policy="dynamic"/>
+</scr:component>

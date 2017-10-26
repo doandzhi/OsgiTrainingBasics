@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.openhab.training.electricity.tv.events">
+
+<implementation class="org.openhab.training.electricity.tv.events.EventsTV"/>
+
+<service>
+   <provide interface="org.osgi.service.event.EventHandler"/>
+   <provide interface="org.osgi.service.cm.ManagedService"/>
+</service>
+<property name="service.pid" type="String" value="org.openhab.training.electricity.tv.events"/>
+<property name="event.topics" type="String" value="org/openhab/training/time"/>
+<reference bind="bind" cardinality="1..n" interface="org.openhab.training.electricity.provider.ElectricityProvider" name="ElectricityProvider" policy="dynamic" unbind="unbind"/>
+</scr:component>

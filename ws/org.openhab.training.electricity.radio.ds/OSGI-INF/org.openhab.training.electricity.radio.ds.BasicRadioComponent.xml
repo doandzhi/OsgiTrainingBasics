@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.openhab.training.electricity.radio.ds.BasicRadioComponent">
-   <service>
-      <provide interface="org.openhab.training.electricity.consumer.ElectricityConsumer"/>
-   </service>
-   <implementation class="org.openhab.training.electricity.radio.ds.BasicRadioComponent"/>
-</scr:component>
