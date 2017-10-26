@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Homenetwork
+Bundle-SymbolicName: org.openhab.training.electricity.homenetwork
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.openhab.training.electricity.homenetwork.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.openhab.training.electricity.provider,
+ org.osgi.framework
+Bundle-ActivationPolicy: lazy
+Export-Package: org.openhab.training.electricity.homenetwork

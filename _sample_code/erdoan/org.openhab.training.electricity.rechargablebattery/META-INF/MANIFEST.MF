@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rechargablebattery
+Bundle-SymbolicName: org.openhab.training.electricity.rechargablebattery
+Bundle-Version: 1.0.0.qualifier
+Service-Component: OSGI-INF/RechBattery.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.openhab.training.electricity.provider,
+ org.osgi.service.cm
